@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winking!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .portfolio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* 设置项目之间的间隔 */
+        }
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            width: calc(50% - 10px); /* 每个项目占50%宽度，减去间隔的一半 */
+            max-width: 500px; /* 设置最大宽度，防止在大屏幕上过宽 */
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 300px; /* 或者您想要的其他高度 */
+            object-fit: cover;
+        }
+        .portfolio-item .item-content {
+            padding: 10px;
+            text-align: center;
+        }
+        .portfolio-item h3 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .portfolio-item.video-item {
+            width: 100%; /* 视频项目占据整行 */
+            max-width: none; /* 移除最大宽度限制 */
+        }
+        
+        .image-gallery {
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery-image {
+            width: calc(50% - 10px); /* 每行两张图片 */
+            max-width: 500px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-image {
+                width: 100%; /* 在小屏幕上每行一张图片 */
+            }
+        }
+
+        .social-icon.bilibili svg {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            fill: #00a1d6; /* 哔哩哔哩的品牌蓝色 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">wenke-Lu</div>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#portfolio">作品集</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="image-gallery">
+            <div class="gallery-container">
+                <img src="file/IMG_1943.JPG" alt="图片1" class="gallery-image">
+                <img src="file/IMG_4183.JPG" alt="图片2" class="gallery-image">
+                <img src="file/IMG_4309(1).JPG" alt="图片3" class="gallery-image">
+                <img src="file/IMG_4508(1).JPG" alt="图片4" class="gallery-image">
+            </div>
+        </section>
+
+        <section id="about" class="intro">
+            <h1>欢迎来到我的个人网站</h1>
+            <p>本人材料科学与工程专业硕士。</p>
+            <p>这是一个集成我的兴趣爱好的网站设置，目前还在学习阶段</p>
+            <p>目前正在学习前端开发，希望可以做出自己想要的效果</p>
+            <p>正在学习LaTeX排版系统，以提高学术写作能力</p>
+            <p>我的GitHub仓库：<a href="https://github.com/Wnke420" target="_blank">github.com/Wnke420</a></p>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>与AI对话</h2>
+            <div class="chat-container">
+                <div id="chat-messages">
+                    <!-- 消息将通过JavaScript动态添加 -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="输入您的问题...">
+                    <button id="send-button">发送</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2>我的作品集</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/576425(20240913-153444).png" alt="项目1">
+                    <div class="item-content">
+                        <h3>史迪仔！</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/oomTngzEAO9fAIdEnCFmAHDDg1C3AAMOfx0ALg~tplv-dy-k.webp" alt="项目2">
+                    <div class="item-content">
+                        <h3>我来助你！</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <!-- 视频项目已被删除 -->
+                <!-- 可以根据需要添加更多项目 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>联系我</h2>
+        <div class="social-links">
+            <a href="https://www.douyin.com/user/self?from_tab_name=main" class="social-icon douyin" target="_blank">
+                <i class="fab fa-tiktok"></i>
+                <span>抖音</span>
+            </a>
+            <a href="https://weibo.com/u/7204754597" class="social-icon weibo" target="_blank">
+                <i class="fab fa-weibo"></i>
+                <span>微博</span>
+            </a>
+            <a href="https://github.com/" class="social-icon github" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.overleaf.com/project" class="social-icon overleaf" target="_blank">
+                <i class="fas fa-file-alt"></i>
+                <span>Overleaf</span>
+            </a>
+            <a href="https://space.bilibili.com/381656490?spm_id_from=333.1007.0.0" class="social-icon bilibili" target="_blank">
+                <i class="fab fa-bilibili"></i>
+                <span>哔哩哔哩</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
